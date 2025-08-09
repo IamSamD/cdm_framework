@@ -5,6 +5,8 @@ import (
 	"os"
 )
 
+var Logger *slog.Logger
+
 func init() {
 	logLevel := os.Getenv("LOG_LEVEL")
 
