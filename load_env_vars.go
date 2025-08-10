@@ -5,7 +5,8 @@ import (
 	"os"
 )
 
-func LoadEnvVars(envvars []string) (map[string]string, error) {
+// used as part of InitEnvironment to load env vars and parse the config map
+func loadEnvVars(envvars []string) (map[string]string, error) {
 	envVarMap := make(map[string]string)
 
 	for _, envVar := range envvars {
