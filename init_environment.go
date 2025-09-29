@@ -20,8 +20,9 @@ func InitEnvironment(configValues []string) (Config, error) {
 		}
 
 		config = configValuesMap
+	} else {
+		config = goDotEnvConfig
 	}
-	config = goDotEnvConfig
 
 	return config, nil
 }
